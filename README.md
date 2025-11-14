@@ -26,39 +26,39 @@ This repository implements Task 08: Bias Detection in LLM Data Narratives, using
 
 ## 3. Setup
 
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
 ---
 ## 4. Running the Pipeline
 
 **4.1 Generate prompts**
-    python experiment_design.py
+- python experiment_design.py
 
 **4.2 Collect LLM responses**
-    python run_experiment.py
+- python run_experiment.py
 
 **4.3 Process and validate outputs**
 - **Convert JSONL → clean CSV:**
-    python analyze_bias.py
+    - python analyze_bias.py
 - **Validate each model claim against true stats:**
-    python validate_claims.py
+    - python validate_claims.py
 - **Files produced:**
-    results/processed/llm_responses.csv- 
-    results/processed/claim_validation_flags.csv
+    - results/processed/llm_responses.csv- 
+    - results/processed/claim_validation_flags.csv
 
 **4.4 Quantitative analysis**
 - **Compute fabrication & overclaim rates:**
-    python fabrication_rate.py
+    - python fabrication_rate.py
 - **Run chi-square tests, z-tests, effect sizes:**
-    python analysis_save_stats.py
+    - python analysis_save_stats.py
 - **Generate visualizations (bar charts & heatmaps):**
-    python analysis_visualizations.py
+    - python analysis_visualizations.py
   
 **4.5 View results in:**
 - **Processed CSV files**
-    results/processed/
+    - results/processed/
 - **Statistical tests + visualizations:**
-    analysis/ 
+    - analysis/ 
 
 ---
 
