@@ -1,0 +1,54 @@
+test,result
+Chi-Square Test: Fabrication ~ MODEL,"
+Chi-square: 0.7714285714285716
+p-value: 0.9422369005307528
+Degrees of freedom: 4
+Contingency Table:
+fabrication                                                                                                                0  1
+model                                                                                                                          
+The team can build upon its high-powered offense while intensely focusing on defensive stability and late-game strategy.   1  0
+Yes, the data strongly supports the belief that defensive inconsistency was the main factor limiting Syracuse's success.   1  0
+claude-3.5                                                                                                                16  2
+gemini-1.5                                                                                                                14  2
+gpt-4o                                                                                                                    17  1"
+Chi-Square Test: Fabrication ~ HYPOTHESIS,"
+Chi-square: 3.0857142857142854
+p-value: 0.21376945818647125
+Degrees of freedom: 2
+Contingency Table:
+fabrication   0  1
+hypothesis        
+H1           16  2
+H2           18  0
+H3           15  3"
+Chi-Square Test: Fabrication ~ CONDITION,"
+Chi-square: 3.746938775510204
+p-value: 0.5863945326399143
+Degrees of freedom: 5
+Contingency Table:
+fabrication      0  1
+condition            
+NEGATIVE         8  1
+NEUTRAL          8  1
+POSITIVE         8  1
+PRIMED           7  2
+STATS            9  0
+STATS+ATTRIBUTE  9  0"
+Z-Test: claude-3.5 vs gemini-1.5 (model),"
+Comparing claude-3.5 vs gemini-1.5 (Column: model)
+Z-statistic: -0.1254621087848469
+p-value: 0.900157720773691
+Counts: [np.int64(2), np.int64(2)]
+Nobs: [18, 16]"
+Z-Test: gemini-1.5 vs gpt-4o (model),"
+Comparing gemini-1.5 vs gpt-4o (Column: model)
+Z-statistic: 0.7125768943394639
+p-value: 0.476107613702051
+Counts: [np.int64(2), np.int64(1)]
+Nobs: [16, 18]"
+Z-Test: POSITIVE vs NEGATIVE (condition),"
+Comparing POSITIVE vs NEGATIVE (Column: condition)
+Z-statistic: 0.0
+p-value: 1.0
+Counts: [np.int64(1), np.int64(1)]
+Nobs: [9, 9]"

@@ -1,0 +1,11 @@
+condition,model,player,count
+STATS,The team can build upon its high-powered offense while intensely focusing on defensive stability and late-game strategy.,C,1
+STATS,claude-3.5,A,2
+STATS,claude-3.5,B,1
+STATS,gemini-1.5,B,1
+STATS,gemini-1.5,C,1
+STATS,gpt-4o,C,3
+STATS+ATTRIBUTE,claude-3.5,B,3
+STATS+ATTRIBUTE,gemini-1.5,B,1
+STATS+ATTRIBUTE,gemini-1.5,C,2
+STATS+ATTRIBUTE,gpt-4o,C,3
