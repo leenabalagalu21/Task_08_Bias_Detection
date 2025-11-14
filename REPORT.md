@@ -69,6 +69,7 @@ These files were then used for quantitative analysis and visualization in the `a
 
 ### 3.1 Quantitative Results
 
+#### 3.1.1
 We computed fabrication/overclaim rates per model, hypothesis, and condition using `fabrication_rate.py`.
 
 - **By model:**  
@@ -83,12 +84,43 @@ We computed fabrication/overclaim rates per model, hypothesis, and condition usi
   - STATS and STATS+ATTRIBUTE had **0%** fabrication (models stayed close to numeric data).
   - PRIMED prompts showed the highest fabrication/overclaim rate, followed by NEGATIVE, POSITIVE, and NEUTRAL.
 
-Chi-square tests (`analysis_save_stats.py`) showed:
+#### 3.1.2 Chi-square tests (`analysis_save_stats.py`) showed:
 
 - No significant differences in fabrication by model, hypothesis, or condition  
   (e.g., fabrication ~ condition: χ² ≈ 3.75, p ≈ 0.59).
 
 Z-tests for pairwise comparisons (e.g., GPT-4o vs Gemini, POSITIVE vs NEGATIVE) also found no statistically significant differences in fabrication rates.
+
+#### 3.1.3 Sentiment Analysis
+Sentiment scores revealed strong framing effects:
+| Prompt Type | Avg Sentiment Score | Interpretation         |
+|-------------|----------------------|-------------------------|
+| Positive    | ~ +0.90              | Strongly positive       |
+| Negative    | ~ –0.90              | Strongly negative       |
+| Primed      | ~ –0.85 to –1.0      | Strongly negative       |
+| Neutral     | ~ –0.70              | Moderately negative     |
+
+- Model differences:
+  - GPT-4o: Most consistent and controlled
+  - Claude-3.5: Slightly softer negatives
+  - Gemini-1.5: Most negative overall
+
+**Conclusion**
+Sentiment mirrors framing, even though numerical data is unchanged.
+
+#### 3.1.4 Player Mention Patterns (H2: Demographic Influence)
+**Under STATS (no demographics):** 
+- Claude-3.5 → players A and B
+- Gemini-1.5 → players B and C
+- GPT-4o → always player C
+
+**Under STATS+ATTRIBUTE (demographics added):**
+- Claude-3.5 → shifted entirely to Player B
+- Gemini-1.5 → shifted toward C
+- GPT-4o → unchanged (still C)
+
+**Conclusion:**
+Claude-3.5 demonstrates demographic sensitivity, supporting H2.
 
 ### 3.2 Visualizations
 
