@@ -1,10 +1,15 @@
 # Bias Detection in LLM Data Narratives – Syracuse Lacrosse Study
 
 This project investigates whether Large Language Models (LLMs) produce biased narratives when interpreting the same sports dataset under different prompt framings and conditions. Using the 2025 Syracuse women’s lacrosse season results and simplified player statistics, we designed a controlled experiment around three hypotheses: (H1) framing effects (“what went wrong” vs “what opportunities exist”), (H2) demographic/role bias in coaching recommendations, and (H3) confirmation bias when the user’s preferred explanation is explicitly stated.
+
 We queried three LLM families (GPT-4o, Claude 3.5 Sonnet, Gemini 1.5) across multiple prompt variants, collecting 3 runs per model-condition combination. All responses were logged to JSONL, then processed into structured CSVs. We manually annotated claims for factual correctness and potential overclaiming, then computed fabrication indicators and simple bias flags (e.g., overconfident single-cause language, external team mentions).
+
 Quantitatively, fabrication rates were low overall. Chi-square tests showed no statistically significant differences in fabrication by model, hypothesis, or condition (all p > 0.21). However, PRIMED prompts and confirmation-bias scenarios tended to produce more overconfident language and slightly higher fabrication counts. For H2, models often shifted their coaching recommendation when player attributes (senior captain vs sophomore starter vs junior reserve) were included, suggesting sensitivity to role/demographic cues even when underlying performance statistics were identical.
+
 Qualitatively, negative prompts led to narratives emphasizing failure, collapse, and “system breakdowns,” while positive prompts focused on “foundation,” “upside,” and “growth opportunities” despite using the same scores. Primed prompts (“I believe defense was the problem…”) were almost always endorsed by the models, typically framed as “the data clearly supports this,” even when other explanations (offense, strength of schedule, depth) were also plausible.
+
 Overall, we find that modern LLMs maintain relatively stable factual accuracy in this setting but are highly responsive to framing and priming in how they explain and prioritize causes, which has important implications for decision support and sports analytics use cases.
+
 
 ---
 
